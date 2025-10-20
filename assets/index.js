@@ -1,3 +1,12 @@
+// Sprawdź czy użytkownik już był w aplikacji
+window.addEventListener('DOMContentLoaded', function() {
+    const hasVisited = localStorage.getItem('hasVisited');
+    if (hasVisited === 'true') {
+        // Przekieruj od razu do home
+        window.location.href = 'home.html';
+    }
+});
+
 // Toggle instrukcji
 document.querySelector('.top-holder').addEventListener('click', function() {
     document.querySelector('.guide-holder').classList.toggle('active');
@@ -39,6 +48,7 @@ document.getElementById('goButton').addEventListener('click', function(e) {
         localStorage.setItem('userName', name);
         localStorage.setItem('userSurname', surname);
         localStorage.setItem('userIdNumber', idNumber);
+        localStorage.setItem('hasVisited', 'true');
         
         // Przejdź do strony głównej
         window.location.href = 'home.html';
