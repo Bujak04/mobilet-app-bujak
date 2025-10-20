@@ -9,7 +9,7 @@ const fullName = `${userName} ${userSurname}`;
 
 // Wypełnij dane na stronie
 document.getElementById('ticketName').textContent = ticketName;
-document.getElementById('buyerName').textContent = fullName;
+document.getElementById('buyerName').textContent = 'Imię i nazwisko';
 document.getElementById('totalPrice').textContent = ticketPrice.toFixed(2) + ' PLN';
 
 // Pokaż odpowiednie pola w zależności od kategorii
