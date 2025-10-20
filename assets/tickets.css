@@ -16,6 +16,19 @@ body {
     height: 100vh;
 }
 
+.container {
+    background-image: url('../images/menu-tlo.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    max-width: 600px;
+    margin: 0 auto;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-bottom: 60px;
+}
+
 .header {
     background-color: #1162a4;
     padding-top: 10px;
