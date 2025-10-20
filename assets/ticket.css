@@ -22,10 +22,10 @@ body {
     margin: 0 auto;
     background-color: white;
     min-height: 100vh;
-    height: 100vh;
     overflow-y: auto;
     overflow-x: hidden;
     position: relative;
+    flex: 1;
 }
 
 .header {

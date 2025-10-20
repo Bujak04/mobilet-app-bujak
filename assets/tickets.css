@@ -22,13 +22,13 @@ body {
     background-position: center;
     background-attachment: fixed;
     min-height: 100vh;
-    height: 100vh;
     max-width: 600px;
     margin: 0 auto;
     overflow-y: auto;
     overflow-x: hidden;
     padding-bottom: 60px;
     position: relative;
+    flex: 1;
 }
 
 .header {
