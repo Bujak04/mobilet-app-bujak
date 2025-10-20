@@ -16,13 +16,23 @@ body {
     height: 100vh;
 }
 
-.container {
-    padding: 0;
+.page-wrapper {
+    background-color: black;
+    min-height: 100vh;
     max-width: 600px;
     margin: 0 auto;
-    background-color: white;
-    min-height: 100vh;
+    width: 100%;
     overflow-y: auto;
+    overflow-x: hidden;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    padding: 0;
+    background-color: white;
+    overflow-y: visible;
     overflow-x: hidden;
     position: relative;
     flex: 1;
@@ -118,8 +128,8 @@ body {
 }
 
 .qr-code {
-    width: 280px;
-    height: 280px;
+    width: 320px;
+    height: 320px;
     object-fit: contain;
 }
 
