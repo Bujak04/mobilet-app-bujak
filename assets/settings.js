@@ -71,6 +71,22 @@ document.getElementById('resetApp').addEventListener('click', function() {
 // Załaduj bilety przy starcie
 loadTickets();
 
+// Stan konta
+const accountBalanceInput = document.getElementById('accountBalance');
+const saveBalanceBtn = document.getElementById('saveBalance');
+const balanceSuccessMsg = document.getElementById('balanceSuccessMsg');
+
+accountBalanceInput.value = localStorage.getItem('accountBalance') || '';
+
+saveBalanceBtn.addEventListener('click', function() {
+    const val = parseFloat(accountBalanceInput.value);
+    if (!isNaN(val) && val >= 0) {
+        localStorage.setItem('accountBalance', val.toFixed(2));
+        balanceSuccessMsg.classList.add('show');
+        setTimeout(() => balanceSuccessMsg.classList.remove('show'), 3000);
+    }
+});
+
 // Zapisz ustawienie sortowania
 document.getElementById('sortNormal').addEventListener('change', function() {
     localStorage.setItem('sortNormal', this.checked);

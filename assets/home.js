@@ -45,6 +45,20 @@ function handleSwipe() {
     }
 }
 
+// Stan konta
+function loadBalance() {
+    const balance = localStorage.getItem('accountBalance') || '0.00';
+    document.getElementById('balanceAmount').textContent = parseFloat(balance).toFixed(2) + ' PLN';
+}
+loadBalance();
+
+document.getElementById('balanceRefresh').addEventListener('click', function() {
+    const icon = this;
+    icon.classList.add('spin');
+    setTimeout(() => icon.classList.remove('spin'), 400);
+    loadBalance();
+});
+
 // Nawigacja między kafelkami
 document.getElementById('transport').addEventListener('click', function() {
     window.location.href = 'transport.html';
