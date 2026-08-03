@@ -76,6 +76,19 @@ if (ticketCategory === 'miesieczne') {
     }
 }
 
+// Ustaw stałą prędkość lotu logo niezależnie od szerokości ekranu
+(function() {
+    const speed = 160; // px/s
+    const container = document.querySelector('.flying-logo-top');
+    if (container) {
+        const distance = container.offsetWidth + 400;
+        const duration = (distance / speed).toFixed(2) + 's';
+        document.querySelectorAll('.zkg-logo').forEach(el => {
+            el.style.animationDuration = duration;
+        });
+    }
+})();
+
 // Generuj animowany kod QR
 function generateQRAnimation() {
     const qrCode = document.getElementById('qrCode');

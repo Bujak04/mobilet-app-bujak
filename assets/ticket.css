@@ -112,7 +112,7 @@ body {
     height: 48px;
     width: auto;
     position: absolute;
-    animation: flyLogo 3.5s linear infinite;
+    animation: flyLogo 3.5s linear infinite; /* nadpisywane przez JS */
 }
 
 @keyframes flyLogo {
